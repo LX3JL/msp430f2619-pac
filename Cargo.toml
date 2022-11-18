@@ -1,0 +1,20 @@
+[package]
+name = "msp430f2619-pac"
+version = "0.1.0"
+authors = ["Jean-Luc Deltombe <lx3jl@alt.lu>"]
+edition = "2021"
+repository = "https://github.com/LX3JL/msp430f2619-pac"
+description = "A peripheral access crate (PAC) for TI's MSP430F2619 mcu"
+keywords = ["embedded", "msp430", "pac"]
+license = "MIT"
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+msp430 = "0.4.0"
+msp430-atomic = "0.1.4"
+msp430-rt = "0.4.0"
+vcell = "0.1.0"
+
+[features]
+rt = ["msp430-rt/device"]
+#unstable = ["msp430-atomic"]
